@@ -70,6 +70,16 @@ body.dark-mode button {
   padding-top: 14px;
 }
 
+.material-symbols-outlined{
+  padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .material-symbols-outlined{
+    padding-left: 10px;
+  }
+}
+
 .navbar55 a{
     height: 100%;
     padding: 0 30px;
@@ -166,8 +176,7 @@ body.dark-mode button {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-   overflow: visible; /* penting: agar bagian yang di-scale tidak terpotong */
+  overflow: visible; /* penting: agar bagian yang di-scale tidak terpotong */
 }
 
 dotlottie-player {
@@ -561,3 +570,21 @@ footer{
 }
 
 
+.card2 .card {
+  background-color: transparent !important; /* hilangkan background putih */
+  border: none !important; /* hilangkan border */
+  box-shadow: none !important; /* hilangkan bayangan jika ada */
+}
+
+.card2 .card-body {
+  background-color: transparent !important; /* hilangkan putih di body */
+}
+
+
+.cardjudul{
+  color: #00adff;;
+}
+
+.card-text{
+  color: white;
+}

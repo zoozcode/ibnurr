@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js
 ">
-        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- CSS -->
 
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
 <body>
@@ -32,7 +34,9 @@
             <li><a href="#skill">Skill</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
-      <button id="toggle-dark" style="padding-left: 20px">🌙</button>
+      <button id="toggle-dark" style="padding-left: 20px"><span class="material-symbols-outlined">
+light_mode
+</span></button>
     </li>
         </ul>
         <ul>
@@ -43,7 +47,9 @@
             <li class="hideOnMobile"><a href="#skill">Skill</a></li>
             <li class="hideOnMobile"><a href="#contact">Contact</a></li>
             <li>
-      <button class="hideOnMobile" id="toggle-dark">🌙</button>
+      <button class="hideOnMobile" id="toggle-dark"><span class="material-symbols-outlined">
+light_mode
+</span></button>
     </li>
             <li class="menu-button" onclick="showSidebar()"><a href="#"><span class="material-symbols-outlined">menu</span></a></li>
         </ul>
@@ -101,47 +107,100 @@
   <h4 style="color: white; font-weight: bold;" class="pt-5">PORTOFOLIO</h4>
   <h2 style="color: rgb(255, 240, 31);" class="pro">Project Terbaru Saya</h2>
   <div class="projects-container">
-  <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
-    <img src="image/hp.png" alt="ASCII Video to Text" />
-    <h3 style="color: #00adff; font-weight: bold;">SMPIMH PAKIS AJI-JEPARA</h3>
-    <p style="color: white">Sebuah website akun resmi dari SMPIMH PAKIS-AJI JEPARA</p>
-    <a href="https://smpimhpakisajijepara.sch.id/public/" class="demo-btn">hasil</a>
+  
+  <div class="row flex justify-content-center gap-5">
+
+
+  
+  <div class="card2 col-lg-3 col-md-5 col-sm-10 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="700">
+    <div class="card w-100 h-100 d-flex flex-column">
+  <img src="image/hp.png" class="card-img-top rounded-xl" alt="...">
+  <div class="card-body p-0 pt-3 d-flex flex-column">
+    <h5 class="cardjudul text-start fw-bold text-nowrap m-0 mb-2">SMPIMH PAKIS AJI-JEPARA</h5>
+    <p class="card-text text-start m-0 mb-3">Sebuah website akun resmi dari SMPIMH PAKIS-AJI JEPARA</p>
+    <div class="d-flex justify-content-start mt-auto">
+      <a href="https://smpimhpakisajijepara.sch.id/public/" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-1 rounded-full font-bold" style="text-decoration: none;">View</a>
+    </div>
+  </div>
+</div>
+  </div>
+  
+  <div class="card2 col-lg-3 col-md-5 col-sm-10 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+    <div class="card w-100 h-100 d-flex flex-column" >
+  <img src="image/puk.png" class="card-img-top rounded-xl" alt="...">
+  <div class="card-body p-0 pt-3 d-flex flex-column">
+    <h5 class="cardjudul text-start fw-bold text-nowrap m-0 mb-2">PUKUL KELINCI</h5>
+    <p class="card-text text-start m-0 mb-3">Sebuah game yang dibuat untuk memukul 2 kelinci nakal</p>
+    <div class="d-flex justify-content-start mt-auto">
+      <a href="https://zoozcode.github.io/pukul-kelinci/" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-1 rounded-full font-bold" style="text-decoration: none;">View</a>
+    </div>
+  </div>
+</div>
+  </div>
+  
+  <div class="card2 col-lg-3 col-md-5 col-sm-10 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+    <div class="card w-100 h-100 d-flex flex-column" >
+  <img src="image/meubel.png" class="card-img-top rounded-xl" alt="...">
+  <div class="card-body p-0 pt-3 d-flex flex-column">
+    <h5 class="cardjudul text-start fw-bold text-nowrap m-0 mb-2">MEUBEL JEPARA</h5>
+    <p class="card-text text-start m-0 mb-3">Sebuah website umkm untuk memasarkan produk furniture</p>
+    <!-- <div class="d-flex justify-content-start">
+      <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-1 rounded-full font-bold" style="text-decoration: none;">View</a>
+    </div> -->
+  </div>
+</div>
+  </div>
+  
+  <div class="card2 col-lg-3 col-md-5 col-sm-10 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+    <div class="card w-100 h-100 d-flex flex-column" >
+  <img src="image/dcaa.png" class="card-img-top rounded-xl" alt="...">
+  <div class="card-body p-0 pt-3 d-flex flex-column">
+    <h5 class="cardjudul text-start fw-bold text-nowrap m-0 mb-2">PT. DUNIA CUTTING ABADI</h5>
+    <p class="card-text text-start m-0 mb-3">Sebuah website akun resmi dari PT. DCA yang bergerak di pembuatan cutting dies & thomson</p>
+    <div class="d-flex justify-content-start mt-auto">
+      <a href="https://ptdca.vercel.app/" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-1 rounded-full font-bold" style="text-decoration: none;">View</a>
+    </div>
+  </div>
+</div>
+  </div>
+  
+  <div class="card2 col-lg-3 col-md-5 col-sm-10 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+    <div class="card w-100 h-100 d-flex flex-column" >
+  <img src="image/das.png" class="card-img-top rounded-xl" alt="...">
+  <div class="card-body p-0 pt-3 d-flex flex-column">
+    <h5 class="cardjudul text-start fw-bold text-nowrap m-0 mb-2">DASHBOARD ADMIN</h5>
+    <p class="card-text text-start m-0 mb-3">Sebuah dashboard admin karya saya yang minimalis & simple</p>
+    <!-- <div class="d-flex justify-content-start">
+      <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-1 rounded-full font-bold" style="text-decoration: none;">View</a>
+    </div> -->
+  </div>
+</div>
+  </div>
+  
+  <div class="card2 col-lg-3 col-md-5 col-sm-10 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="600">
+    <div class="card w-100 h-100 d-flex flex-column" >
+  <img src="image/film.png" class="card-img-top rounded-xl" alt="...">
+  <div class="card-body p-0 pt-3 d-flex flex-column">
+    <h5 class="cardjudul text-start fw-bold text-nowrap m-0 mb-2">FILM MOVIE</h5>
+    <p class="card-text text-start m-0 mb-3">Sebuah website film movie yang akan ditayangkan</p>
+    <div class="d-flex justify-content-start mt-auto">
+      <a href="https://zoozcode.github.io/film-movie/" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-1 rounded-full font-bold" style="text-decoration: none;">View</a>
+    </div>
+  </div>
+</div>
   </div>
 
-  <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-    <img src="image/kelinci2.png" alt="Whack A Mole" />
-    <h3 style="color: #00adff; font-weight: bold;">PUKUL KELINCI</h3>
-    <p style="color: white">Sebuah game yang dibuat untuk memukul 2 kelinci nakal</p>
-    <a href="https://zoozcode.github.io/pukul-kelinci/" class="demo-btn">hasil</a>
-  </div>
+    </div>
 
-  <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-    <img src="image/meubel.png" alt="Marketplace Rating" />
-    <h3 style="color: #00adff; font-weight: bold;">MEUBEL JEPARA</h3>
-    <p style="color: white">Sebuah website umkm untuk memasarkan produk furniture</p>
-    <!-- <a href="http://localhost:8000/home" class="demo-btn">hasil</a> -->
-  </div>
-  <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-    <img src="image/ptdca.png" alt="Marketplace Rating" />
-    <h3 style="color: #00adff; font-weight: bold;">PT. DUNIA CUTTING ABADI</h3>
-    <p style="color: white">Sebuah website akun resmi dari PT. DCA yang bergerak di pembuatan cutting dies & thomson</p>
-    <a href="https://ptdca.vercel.app/" class="demo-btn">hasil</a>
-  </div>
-  <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-    <img src="image/admin.png" alt="Marketplace Rating" />
-    <h3 style="color: #00adff; font-weight: bold;">DASHBOARD ADMIN</h3>
-    <p style="color: white">Sebuah dashboard admin karya saya yang minimalis & simple</p>
-    <!-- <a href="#" class="demo-btn">hasil</a> -->
-  </div>
-  <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-    <img src="image/ukir.jpg" alt="Marketplace Rating" />
-    <h3 style="color: #00adff; font-weight: bold;">Marketplace&nbsp;&nbsp;Rating</h3>
-    <p style="color: white">Sebuah E-commerce yang dapat memberi rating dan komentar pada produk tertentu dan bisa membelinya</p>
-    <a href="#" class="demo-btn">hasil</a>
-  </div>
+<div class="lihat d-flex justify-content-center mt-4 fw-bold">
+  <a href="view.html" class="text-white">View All</a>
 </div>
 
 </div>
+
+</div>
+
+
 
  <!-- skill -->
 <div id="skill" class="skill-section">
@@ -154,13 +213,14 @@
     Saya belajar kemampuan ini secara otodidak melalui tutorial atau dokumentasi yang ada.
   </p>
 
+  <!-- skill logo -->
   <div  class="skill-icons">
     <div class="skill-icon"><img src="image/html2.png" alt="html" /></div>
     <div class="skill-icon"><img src="image/css.png" alt="css" /></div>
     <div class="skill-icon"><img src="image/js2.png" alt="js" /></div>
     <div class="skill-icon"><img src="image/php.png" alt="php" /></div>
-    <div class="skill-icon"><img src="image/python.png" alt="python" /></div>
     <div class="skill-icon"><img src="image/mysql.png" alt="MySQL" /></div>
+    <div class="skill-icon"><img src="image/tailwind2.png" alt="tailwind" /></div>
     <div class="skill-icon"><img src="image/bs2.png" alt="bs" /></div>
     <div class="skill-icon"><img src="image/react.png" alt="React" /></div>
     <div class="skill-icon"><img src="image/laravel.png" alt="laravel " /></div>
@@ -211,6 +271,7 @@
 </div>
 </body>
 <script>
+  //show/hide bar
     function showSidebar(){
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.display = 'flex'
@@ -219,7 +280,9 @@
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.display = 'none'
     }
-   const toggleButton = document.querySelectorAll('#toggle-dark');
+
+//dark-mode
+  const toggleButton = document.querySelectorAll('#toggle-dark');
 
   toggleButton.forEach(btn => {
     btn.addEventListener('click', () => {
