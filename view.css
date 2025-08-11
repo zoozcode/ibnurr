@@ -33,3 +33,58 @@
         height: 10vh;
     }
 }
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.card{
+    max-width: 300px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.card h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #00adff;
+    padding-left: 5px;
+    padding-top: 8px;
+    font-size: 24px;
+}
+
+.card p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.tombol{
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.tombol a{
+    text-decoration: none;
+    background-color: tomato;
+    color: white;
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tombol a:hover{
+    background-color: rgb(245, 59, 26);
+}
