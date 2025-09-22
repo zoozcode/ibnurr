@@ -27,15 +27,15 @@ body.dark-mode a {
 }
 
 body.dark-mode .sidebar {
-  background-color: #1e1e1e;
+  background-color: rgb(51, 51, 51);
 }
 
 body.dark-mode .navbar55 {
-  background-color: #1a1a1a;
+  background-color:rgb(51, 51, 51);
 }
 
 body.dark-mode button {
-  background-color: #333;
+  background-color: rgb(51, 51, 51);
   color: #fff;
 }
 
@@ -182,7 +182,7 @@ body.dark-mode button {
 dotlottie-player {
  width: 100%;
   max-width: 900px; /* Bisa diganti 700 atau 800 jika masih kecil */
-  transform: scale(1.9); /* Tambahkan efek zoom */
+  transform: scale(1.6); /* Tambahkan efek zoom */
   transform-origin: center;
   height: auto;
 }
@@ -587,4 +587,20 @@ footer{
 
 .card-text{
   color: white;
+}
+
+.hideOnMobile2{
+  padding-top: 14px;
+  padding-right:30px ;
+  padding-left: 10px;
+}
+
+@media (max-width: 768px){
+  .hideOnMobile2{
+    display: none;
+  }
+}
+
+.lolo{
+  padding-left: 20px;
 }

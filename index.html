@@ -23,37 +23,52 @@
 </head>
 <body>
 
-  <!-- navbar -->
-  <div class="dark-mode">
-    <div class="navbar55">
-        <ul class="sidebar">
-            <li onclick="hideSidebar()"><a href="#"><span class="material-symbols-outlined">close</span></a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portofolio">Portofolio</a></li>
-            <li><a href="#skill">Skill</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-      <button id="toggle-dark" style="padding-left: 20px"><span class="material-symbols-outlined">
-light_mode
-</span></button>
+<!-- navbar -->
+<div class="navbar55">
+  <!-- Sidebar -->
+  <ul class="sidebar">
+    <li onclick="hideSidebar()">
+      <a href="#"><span class="material-symbols-outlined">close</span></a>
     </li>
-        </ul>
-        <ul>
-            <li class="hiya"><a href="">IBNU R.R</a></li>
-            <li class="hideOnMobile"><a href="#home">Home</a></li>
-            <li class="hideOnMobile"><a href="#about">About</a></li>
-            <li class="hideOnMobile"><a href="#portofolio">Portofolio</a></li>
-            <li class="hideOnMobile"><a href="#skill">Skill</a></li>
-            <li class="hideOnMobile"><a href="#contact">Contact</a></li>
-            <li>
-      <button class="hideOnMobile" id="toggle-dark"><span class="material-symbols-outlined">
-light_mode
-</span></button>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portofolio</a></li>
+    <li><a href="#skill">Skill</a></li>
+    <li><a href="#contact">Contact</a></li>
+
+    <!-- 🔥 tombol dark mode khusus di sidebar -->
+    <li>
+      <button class="toggle-dark">
+        <div class="lolo">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </div>
+      </button>
     </li>
-            <li class="menu-button" onclick="showSidebar()"><a href="#"><span class="material-symbols-outlined">menu</span></a></li>
-        </ul>
-    </div>
+  </ul>
+
+  <!-- Navbar menu utama -->
+  <ul>
+    <li class="hiya"><a href="#">IBNU R.R</a></li>
+    <li class="hideOnMobile"><a href="#home">Home</a></li>
+    <li class="hideOnMobile"><a href="#about">About</a></li>
+    <li class="hideOnMobile"><a href="#portfolio">Portofolio</a></li>
+    <li class="hideOnMobile"><a href="#skill">Skill</a></li>
+    <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+
+    <!-- 🔥 tombol dark mode untuk desktop -->
+    <li class="hideOnMobile2">
+      <button class="toggle-dark">
+        <span class="material-symbols-outlined">dark_mode</span>
+      </button>
+    </li>
+
+    <!-- Tombol menu mobile -->
+    <li class="menu-button" onclick="showSidebar()">
+      <a href="#"><span class="material-symbols-outlined">menu</span></a>
+    </li>
+  </ul>
+</div>
+
 
    <!-- home -->
     <div id="home" class="wrapper">
@@ -271,25 +286,27 @@ light_mode
 </div>
 </body>
 <script>
-  //show/hide bar
-    function showSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'flex'
-    }
-    function hideSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'none'
-    }
+   // Show / Hide Sidebar
+  function showSidebar() {
+    document.querySelector('.sidebar').style.display = 'flex';
+  }
 
-//dark-mode
-  const toggleButton = document.querySelectorAll('#toggle-dark');
+  function hideSidebar() {
+    document.querySelector('.sidebar').style.display = 'none';
+  }
 
-  toggleButton.forEach(btn => {
+  // Dark Mode Toggle
+  const toggleButtons = document.querySelectorAll('.toggle-dark');
+
+  toggleButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
+
+      const icon = btn.querySelector('span');
+      icon.textContent = 
+        (icon.textContent.trim() === "dark_mode") ? "light_mode" : "dark_mode";
     });
   });
-
   
   AOS.init();
 
