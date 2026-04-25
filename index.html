@@ -32,7 +32,8 @@
     </li>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Portofolio</a></li>
+    <li><a href="#portofolio">Portofolio</a></li>
+    <li><a href="#prestasi">Prestasi</a></li>
     <li><a href="#skill">Skill</a></li>
     <li><a href="#contact">Contact</a></li>
 
@@ -51,7 +52,8 @@
     <li class="hiya"><a href="#">IBNU R.R</a></li>
     <li class="hideOnMobile"><a href="#home">Home</a></li>
     <li class="hideOnMobile"><a href="#about">About</a></li>
-    <li class="hideOnMobile"><a href="#portfolio">Portofolio</a></li>
+    <li class="hideOnMobile"><a href="#portofolio">Portofolio</a></li>
+    <li class="hideOnMobile"><a href="#prestasi">Prestasi</a></li>
     <li class="hideOnMobile"><a href="#skill">Skill</a></li>
     <li class="hideOnMobile"><a href="#contact">Contact</a></li>
 
@@ -77,7 +79,7 @@
     <h1><b class="kedua">IBNU RAFI RAMADHANI</b></h1>
     <h3 class="ketiga">FULLSTACK DEVELOPER</h3>
       <p style="color: gray">Bagaimana hidupmu kawan? apakah lebih baik dari <span style="color:  #ff0091;">kemarin?</span></p>
-    <a href="https://wa.me/6285601758283
+    <a href="https://wa.me/6285876848657
 ?text=hi%20min,%20saya%20berminat%20memesan%20website%20umkm%20" class="btn btn-primary my-2" style="font-weight:600;">Hubungi Saya</a>
     
   </div>
@@ -215,7 +217,23 @@
 
 </div>
 
+<!-- prestasi -->
+ <div class="prestasi container-fluid my-3 py-5" id="prestasi">
+    <div class="container">
+      <h2 class="text-center fw-bold my-3 fs-1">Sertifikat</h2>
 
+      <div class="body row d-flex gap-4 justify-content-center">
+        <div class="card col-lg-5 md:col-lg-6">
+          <img src="./image/lks1.png" class="img-fluid" alt="">
+          <p class="text-gray fw-bold">Juara 1 LKS WEB TECHNOLOGY tingkat Kabupaten Jepara Tahun 2026</p>
+        </div>
+        <div class="card col-lg-5 md:col-lg-6">
+          <img src="./image/lks3.png" class="img-fluid" alt="">
+          <p class="text-gray fw-bold">Juara 3 LKS WEB TECHNOLOGY tingkat Kabupaten Jepara Tahun 2025</p>
+        </div>
+      </div>
+    </div>
+ </div>
 
  <!-- skill -->
 <div id="skill" class="skill-section">
@@ -255,7 +273,7 @@
                         <a href="https://web.facebook.com/ibnu.rr.96"> <i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.instagram.com/ibnur.r_17/"> <i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.youtube.com/@ibnuofficial017/featured"> <i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://wa.me/6285601758283
+                        <a href="https://wa.me/6285876848657
 ?text=hi%20min,%20saya%20berminat%20memesan%20website%20umkm%20"> <i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -270,14 +288,14 @@
                 <div class="box">
                     <h2>Kontak</h2>
                     <p><i class="fa-solid fa-envelope"></i> ibnu19173@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> +62 856-0175-8283</p>
+                    <p><i class="fa-solid fa-phone"></i> +62 858-7684-8657</p>
                     <p><i class="fa-solid fa-location-pin"></i> Bandengan RT 12/04 Jepara</p>
                 </div>
             </div>
 
            <!-- copyright -->
             <div class="copyright">
-                <p style="color: gray">Copyright 2025 &copy; <span>IBNU R.R</span></p>
+                <p style="color: gray">Copyright 2026 &copy; <span>IBNU R.R</span></p>
             </div>
             
         </div>
@@ -286,7 +304,7 @@
 </div>
 </body>
 <script>
-   // Show / Hide Sidebar
+  // Show / Hide Sidebar
   function showSidebar() {
     document.querySelector('.sidebar').style.display = 'flex';
   }
@@ -298,17 +316,28 @@
   // Dark Mode Toggle
   const toggleButtons = document.querySelectorAll('.toggle-dark');
 
+  // CEK saat halaman pertama kali dibuka
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+
   toggleButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
 
       const icon = btn.querySelector('span');
-      icon.textContent = 
-        (icon.textContent.trim() === "dark_mode") ? "light_mode" : "dark_mode";
+
+      // CEK apakah sekarang dark mode aktif
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        icon.textContent = "light_mode";
+      } else {
+        localStorage.setItem("theme", "light");
+        icon.textContent = "dark_mode";
+      }
     });
   });
-  
-  AOS.init();
 
+  AOS.init();
 </script>
 </html>
